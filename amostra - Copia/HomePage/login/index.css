@@ -1,0 +1,123 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.center{
+
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 2%;
+
+}
+
+html, body{
+    height: 100%;
+    overflow-y: hidden;
+    overflow-x: hidden;
+}
+
+.header{
+    height: 200px;
+    padding: 20px 0;
+}
+
+.logo{
+    width: 50%;
+}
+
+.menu{
+ 
+    padding-top: 50px;
+    width: 50%;
+    text-align: right;
+}
+
+.menu a{
+    color: #6B0D47;
+    font-size: 40px;
+    text-decoration: none;
+    font-weight: bold;
+    margin-right: 15px;
+}
+
+section.sobre{
+    height: calc(100% - 200px);
+    position: relative;
+}
+
+.extras{
+    position: absolute;
+    bottom: -400px;
+    left: -550px;
+    width: 1100px;
+    height: 1100px;
+    border-radius: 50%;
+    background-color: #6B0D47;
+}
+.homem{
+
+    position: absolute;
+    left: 500px;
+    top: -150px;
+    width: 9%;
+    height: 12%;
+}
+
+.enviar{
+    margin-top: 50px;
+    width: 16%;
+    left: 42%; 
+    position: relative;
+    background-color: #6B0D47;
+    color: #ffffff;
+    padding: 10px 0;
+    font-size: 18px;
+    font-weight: 600;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+}
+
+.enviar:hover{
+    transform: translateY(-20px);
+} 
+
+input{
+    display: block;
+    height: 50px;
+    background-color: rgba(255,255,255,0.07);
+    border-radius: 10px;
+    padding: 0 10px;
+    margin-top: 8px;
+    font-size: 14px;
+    font-weight: 300;
+      width: 20%;
+     left: 40%; 
+     position: relative;
+}
+
+.nome{
+
+color:#6B0D47;
+font-family: 'Times, Times New Roman, serif, fantasy';
+font-weight: 900;
+    font-size: 26px;
+    text-align: center;
+    
+
+}
+
+.senha{
+
+    color:#6B0D47;
+      font-family: 'Times, Times New Roman, serif, fantasy';
+    font-size: 26px;
+    font-weight: 900;
+    text-align: center;
+
+}

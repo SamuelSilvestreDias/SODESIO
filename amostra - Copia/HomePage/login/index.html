@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Projeto amostra</title>
+    <meta meta name="viewport" content="width=device-width, user-scalable=no" />
+    <link href="index.css" rel="stylesheet" />
+
+
+</head>
+<body>
+    <header>
+
+        <div class="center">
+                <div class="logo"><img style="width: 200px;" src="c70c54dc_56f4_46b9_b6a4_ccc323f51e5c__1__removebg_preview_2.png"/></div>    
+            <div class="menu">  
+            <a href="#">SODESIO</a>
+            </div>
+        </div>
+
+    </header>
+    <div >
+        <br><p class="nome">Nome:</p>
+        <br><input type="text" id="nome" placeholder="Nome do Usuário">
+        <br><p class="senha">Senha:</p><br>
+        <input type="password" id="senha" placeholder="Senha">
+        <input class="enviar" type="submit" onclick="enviado()">
+    
+</div>
+   <section class="sobre">
+        <div class="extras">
+            <div class="homem"><img src="kisspng_suit_stock_photography_man_with_crossed_arms_compa_nice_5ac9da8b079cf4_1.png"/></div>
+        </div>
+       
+   </section>
+   <script>
+        function enviado() {
+            let nome = document.getElementById("nome").value;
+            let senha = document.getElementById("senha").value;
+
+            // mini banco de dados
+            let registro = [
+                {"nome":"erick", "senha": "erick123"},
+                {"nome":"1", "senha": "1"},
+                {"nome":"gabriel", "senha": "gabriel123"}];
+
+            let count = 0;
+            // verificar no registro pra ver se bate com o que o úsuario informou
+            for (let r of registro) {
+                if (nome == r.nome && senha == r.senha) {
+                    window.location.href = "Perfil/perfil.html?nome=" + r.nome;
+                } else {
+                    // count usado pra contar as incorrespondências
+                    count++;
+                }
+            }
+
+            // se as incorrespondências for igual o tamanho do registro, todas estão erradas
+            if (count == registro.length) {
+                document.getElementById("aviso").innerHTML = "Nome ou senha incorretos.";
+            }
+
+        }
+    </script>
+</body>
+</html>
